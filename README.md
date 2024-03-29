@@ -3,14 +3,5 @@
 A new islame app Flutter project.
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##Splash screen
+![Splach](https://github.com/MahmoudMADIH/islameapp/assets/101363586/7dcb1a8f-97fb-488d-9c5c-620e5b6c74d9)
