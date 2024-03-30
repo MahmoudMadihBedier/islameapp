@@ -56,7 +56,7 @@ class quarnFragmant extends StatelessWidget {
                   },
                   itemCount: suraNames.length,
                     itemBuilder: (context ,index){
-                  return suraName(suraNames[index]);
+                  return suraName(suraNames[index],index);
                 }) ,
 
               )),
