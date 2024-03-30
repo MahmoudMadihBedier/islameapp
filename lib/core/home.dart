@@ -2,18 +2,24 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:islameapp/widget_fragment/quran/quran.dart';
+import 'package:islameapp/widget_fragment/sebha/sebha.dart';
+
+import '../widget_fragment/ahades/ahades.dart';
+import '../widget_fragment/radio/radio.dart';
 
 class Home extends StatefulWidget {
   static String ROUTE_NAME = "home";
+
 
   @override
   State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
+  int currentIndex=0;
   @override
   Widget build(BuildContext context) {
-    int currentIndex=0;
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
@@ -32,22 +38,23 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
+          body: getBody(),
           bottomNavigationBar: Theme(
-            data: ThemeData(
-              canvasColor: Color(0xffB7935F)
-            ),
+            data: Theme.of(context).copyWith(canvasColor:Color(0xffB7935F)),
+            // canvasColor: Color(0xffB7935F)
+
             child: BottomNavigationBar(
-              onTap: (index) {
-                currentIndex=index;
-                setState(() {
-                });
-                print(currentIndex);
-                
-              },
+             onTap: (value) {
+               currentIndex=value;
+               setState(() {
+               });
+               print(value);
+               print(currentIndex);
+             },
               selectedItemColor: Color(0xff0F1424),
-             currentIndex: currentIndex,
               backgroundColor: const Color(0xffB7935F),
-              items:  [
+              currentIndex:currentIndex,
+              items:[
                 BottomNavigationBarItem(
                     label: "Qouran",
                     icon: ImageIcon(AssetImage("assets/images/icon_quran.png"))),
@@ -63,6 +70,21 @@ class _HomeState extends State<Home> {
               ],
             ),
           )),
+
+
+
     );
+  }
+  Widget? getBody(){
+    if(currentIndex==0){
+      return quarnFragmant();
+    }if(currentIndex==1){
+      return ahadesFragment();
+    }
+    if(currentIndex==2){
+      return radioFragment();
+    }if(currentIndex==3){
+      return sebhaFragment();
+    }
   }
 }
