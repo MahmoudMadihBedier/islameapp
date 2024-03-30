@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islameapp/core/home.dart';
+import 'package:islameapp/widget_fragment/quran/sura_details.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,)
       ,
       routes: {
-        Home.ROUTE_NAME:(context)=>Home()
+        Home.ROUTE_NAME:(context)=>Home(),
+        suraDetais.Route_Name:(context)=>suraDetais()
 
       },
       initialRoute: Home.ROUTE_NAME,
