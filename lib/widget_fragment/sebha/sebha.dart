@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../theming/my_them_data.dart';
+
 class sebhaFragment extends StatefulWidget {
   const sebhaFragment({super.key});
 
@@ -12,9 +13,12 @@ class sebhaFragment extends StatefulWidget {
 }
 
 class _sebhaFragmentState extends State<sebhaFragment> {
-  int num_tasbhe=0 ;
-  int index=0 ;
-  List<String> type_of_tasabeh=[ 'الله اكبر','سبحان الله','الحمد لله'];
+  int num_tasbhe = 0;
+
+  int index = 0;
+
+  List<String> type_of_tasabeh = ['الله اكبر', 'سبحان الله', 'الحمد لله'];
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -43,9 +47,7 @@ class _sebhaFragmentState extends State<sebhaFragment> {
                     onPressed: () {
                       num_tasbhe++;
                       TypeOfTsabeh();
-                      setState((){
-
-                      });
+                      setState(() {});
                     },
                     style: ElevatedButton.styleFrom(
                         maximumSize: Size(150, 50),
@@ -61,22 +63,20 @@ class _sebhaFragmentState extends State<sebhaFragment> {
       ],
     );
   }
-  void TypeOfTsabeh(){
-    for(int i=0 ;i<type_of_tasabeh.length;i++){
-      if (num_tasbhe==33){
-            if(index<=3 ){
-           index++;
-          num_tasbhe=0;
+
+  void TypeOfTsabeh() {
+    for (int i = 0; i < type_of_tasabeh.length; i++) {
+      if (num_tasbhe == 33) {
+        if (index <= 3) {
+          index++;
+          num_tasbhe = 0;
           setState(() {});
-            num_tasbhe=0;}
-            if(index==3){
-                  index=index-3;
-                }
+          num_tasbhe = 0;
+        }
+        if (index == 3) {
+          index = index - 3;
+        }
       }
     }
   }
-
 }
-
-
-
