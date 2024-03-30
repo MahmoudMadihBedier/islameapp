@@ -6,9 +6,6 @@ class radioFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: Color(0xff0F1424)
-      ),
     );
   }
 }
