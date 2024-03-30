@@ -4,10 +4,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../theming/my_them_data.dart';
-
-class sebhaFragment extends StatelessWidget {
+class sebhaFragment extends StatefulWidget {
   const sebhaFragment({super.key});
 
+  @override
+  State<sebhaFragment> createState() => _sebhaFragmentState();
+}
+
+class _sebhaFragmentState extends State<sebhaFragment> {
+  int num_tasbhe=0 ;
+  List<String> type_of_tasabeh=[ 'الله اكبر','سبحان الله','الحمد لله'];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -28,12 +34,17 @@ class sebhaFragment extends StatelessWidget {
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  '30',
+                  '${num_tasbhe}',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
                 ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      num_tasbhe++;
+                      setState((){
+
+                      });
+                    },
                     child: Text(
                       "سبحان الله",
                       style: TextStyle(fontSize: 20),
@@ -48,4 +59,10 @@ class sebhaFragment extends StatelessWidget {
       ],
     );
   }
+  // void TypeOfTsabeh(){
+  //   if (num_tasbhe==33){
+  //     type_of_tasabeh[index+1];
+  //   num_tasbhe=0;
+  //   }
+  // }
 }
