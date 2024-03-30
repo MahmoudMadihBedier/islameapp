@@ -13,6 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    int currentIndex=0;
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
@@ -36,8 +37,17 @@ class _HomeState extends State<Home> {
               canvasColor: Color(0xffB7935F)
             ),
             child: BottomNavigationBar(
+              onTap: (index) {
+                currentIndex=index;
+                setState(() {
+                });
+                print(currentIndex);
+                
+              },
+              selectedItemColor: Color(0xff0F1424),
+             currentIndex: currentIndex,
               backgroundColor: const Color(0xffB7935F),
-              items: [
+              items:  [
                 BottomNavigationBarItem(
                     label: "Qouran",
                     icon: ImageIcon(AssetImage("assets/images/icon_quran.png"))),
