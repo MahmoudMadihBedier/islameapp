@@ -3,14 +3,10 @@
 A new islame app Flutter project.
 
 ## Getting Started
+## splash screen
+![Splach](https://github.com/MahmoudMADIH/islameapp/assets/101363586/7dcb1a8f-97fb-488d-9c5c-620e5b6c74d9)
+## Quran screen
+![image](https://github.com/MahmoudMADIH/islameapp/assets/101363586/66e89be2-ae52-41d7-9a29-030d842d44ef)
+## sebha screen
+![image](https://github.com/MahmoudMADIH/islameapp/assets/101363586/7c0ecb79-de0a-4966-bc15-14432f8679c7)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
