@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 import '../../theming/my_them_data.dart';
 import '../../widget_fragment/quran/soura_name.dart';
+import '../../widget_fragment/quran/suraView.dart';
 
 class suraWidget extends StatefulWidget {
   const suraWidget({super.key});
@@ -22,24 +23,45 @@ class _suraWidgetState extends State<suraWidget> {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
       padding: EdgeInsets.all(8),
-      color: Colors.white30,
+      color: Colors.black26,
       child:  Column(
         mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-          Container(
-            child: Container(
-                child: Text(
-                  textAlign: TextAlign.end,
-                  args.suraName,style: TextStyle(
-                    fontSize: 30 ,
-                    fontWeight: FontWeight.bold),),),
-            ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              ElevatedButton(
+                      onPressed: (){},
+                      child: Icon(
+                        Icons.play_arrow
+                      ),
+                    ),
+                    Text(
+                      textAlign: TextAlign.start,
+                      args.suraName,style: TextStyle(
+                        fontSize: 30 ,
+                        fontWeight: FontWeight.bold),),
+
+            ],
+          ),
             Container(
               width: double.infinity,
               color: ThemData.primryColor,
               height: 2,
             ),
+            // Container(
+            //     child: ListView.separated(
+            //       itemCount: suraLines.length,
+            //       itemBuilder: (context, index) {
+            //         return SuaraView(suraLines[index],index);
+            //       },
+            //       separatorBuilder: (context, index) {
+            //         return Divider(color: ThemData.primryColor,thickness: 2,);
+            //       },
+            //     )
+            // ),
+
 
     ]),);
   }
